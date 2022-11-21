@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 namespace Base_de_données
 {
     public partial class Form1 : Form
@@ -94,17 +96,26 @@ namespace Base_de_données
 
         private void forinsert_TextChanged(object sender, EventArgs e)
         {
-
+            forupdate.Visible = false;
+            fordelete.Visible = false;
+            Update.Visible = false;
+            Delete.Visible = false;
         }
 
         private void forupdate_TextChanged(object sender, EventArgs e)
         {
-
+            forinsert.Visible = false;
+            fordelete.Visible = false;
+            Insert.Visible = false;
+            Delete.Visible = false;
         }
 
         private void fordelete_TextChanged(object sender, EventArgs e)
         {
-
+            forupdate.Visible = false;
+            forinsert.Visible = false;
+            Update.Visible = false;
+            Insert.Visible = false;
         }
     }
 }
