@@ -72,7 +72,7 @@
             // 
             // Insert
             // 
-            this.Insert.Location = new System.Drawing.Point(27, 262);
+            this.Insert.Location = new System.Drawing.Point(36, 320);
             this.Insert.Name = "Insert";
             this.Insert.Size = new System.Drawing.Size(73, 48);
             this.Insert.TabIndex = 5;
@@ -82,7 +82,7 @@
             // 
             // Update
             // 
-            this.Update.Location = new System.Drawing.Point(166, 262);
+            this.Update.Location = new System.Drawing.Point(179, 320);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(73, 48);
             this.Update.TabIndex = 6;
@@ -92,7 +92,7 @@
             // 
             // Delete
             // 
-            this.Delete.Location = new System.Drawing.Point(304, 262);
+            this.Delete.Location = new System.Drawing.Point(325, 320);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(73, 48);
             this.Delete.TabIndex = 7;
@@ -103,7 +103,7 @@
             // Valid
             // 
             this.Valid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.Valid.Location = new System.Drawing.Point(462, 262);
+            this.Valid.Location = new System.Drawing.Point(503, 320);
             this.Valid.Name = "Valid";
             this.Valid.Size = new System.Drawing.Size(73, 48);
             this.Valid.TabIndex = 8;
@@ -114,7 +114,7 @@
             // Cancel
             // 
             this.Cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Cancel.Location = new System.Drawing.Point(588, 262);
+            this.Cancel.Location = new System.Drawing.Point(645, 320);
             this.Cancel.Name = "Cancel";
             this.Cancel.Size = new System.Drawing.Size(73, 48);
             this.Cancel.TabIndex = 9;
@@ -151,16 +151,16 @@
             // 
             // age
             // 
-            this.age.Location = new System.Drawing.Point(520, 84);
+            this.age.Location = new System.Drawing.Point(193, 215);
             this.age.Multiline = true;
             this.age.Name = "age";
-            this.age.Size = new System.Drawing.Size(100, 33);
+            this.age.Size = new System.Drawing.Size(149, 42);
             this.age.TabIndex = 14;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(442, 94);
+            this.label4.Location = new System.Drawing.Point(83, 231);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(26, 13);
             this.label4.TabIndex = 16;
