@@ -28,51 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.forinsert = new System.Windows.Forms.TextBox();
-            this.forupdate = new System.Windows.Forms.TextBox();
-            this.fordelete = new System.Windows.Forms.TextBox();
+            this.nom = new System.Windows.Forms.TextBox();
             this.Insert = new System.Windows.Forms.Button();
             this.Update = new System.Windows.Forms.Button();
             this.Delete = new System.Windows.Forms.Button();
-            this.Valid = new System.Windows.Forms.Button();
-            this.Cancel = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.labelnom = new System.Windows.Forms.Label();
             this.age = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelage = new System.Windows.Forms.Label();
+            this.prenom = new System.Windows.Forms.TextBox();
+            this.labelprenom = new System.Windows.Forms.Label();
+            this.labelcin = new System.Windows.Forms.Label();
+            this.cin = new System.Windows.Forms.TextBox();
+            this.inser = new System.Windows.Forms.RadioButton();
+            this.updat = new System.Windows.Forms.RadioButton();
+            this.delet = new System.Windows.Forms.RadioButton();
             this.SuspendLayout();
             // 
-            // forinsert
+            // nom
             // 
-            this.forinsert.Location = new System.Drawing.Point(193, 24);
-            this.forinsert.Multiline = true;
-            this.forinsert.Name = "forinsert";
-            this.forinsert.Size = new System.Drawing.Size(149, 38);
-            this.forinsert.TabIndex = 0;
-            this.forinsert.TextChanged += new System.EventHandler(this.forinsert_TextChanged);
-            // 
-            // forupdate
-            // 
-            this.forupdate.Location = new System.Drawing.Point(193, 84);
-            this.forupdate.Multiline = true;
-            this.forupdate.Name = "forupdate";
-            this.forupdate.Size = new System.Drawing.Size(149, 42);
-            this.forupdate.TabIndex = 3;
-            this.forupdate.TextChanged += new System.EventHandler(this.forupdate_TextChanged);
-            // 
-            // fordelete
-            // 
-            this.fordelete.Location = new System.Drawing.Point(193, 150);
-            this.fordelete.Multiline = true;
-            this.fordelete.Name = "fordelete";
-            this.fordelete.Size = new System.Drawing.Size(149, 39);
-            this.fordelete.TabIndex = 4;
-            this.fordelete.TextChanged += new System.EventHandler(this.fordelete_TextChanged);
+            this.nom.Location = new System.Drawing.Point(193, 164);
+            this.nom.Multiline = true;
+            this.nom.Name = "nom";
+            this.nom.Size = new System.Drawing.Size(149, 38);
+            this.nom.TabIndex = 0;
             // 
             // Insert
             // 
-            this.Insert.Location = new System.Drawing.Point(36, 320);
+            this.Insert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Insert.Location = new System.Drawing.Point(377, 364);
             this.Insert.Name = "Insert";
             this.Insert.Size = new System.Drawing.Size(73, 48);
             this.Insert.TabIndex = 5;
@@ -82,7 +65,8 @@
             // 
             // Update
             // 
-            this.Update.Location = new System.Drawing.Point(179, 320);
+            this.Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Update.Location = new System.Drawing.Point(508, 364);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(73, 48);
             this.Update.TabIndex = 6;
@@ -92,7 +76,8 @@
             // 
             // Delete
             // 
-            this.Delete.Location = new System.Drawing.Point(325, 320);
+            this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Delete.Location = new System.Drawing.Point(636, 364);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(73, 48);
             this.Delete.TabIndex = 7;
@@ -100,90 +85,124 @@
             this.Delete.UseVisualStyleBackColor = true;
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
-            // Valid
+            // labelnom
             // 
-            this.Valid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.Valid.Location = new System.Drawing.Point(503, 320);
-            this.Valid.Name = "Valid";
-            this.Valid.Size = new System.Drawing.Size(73, 48);
-            this.Valid.TabIndex = 8;
-            this.Valid.Text = "Valid";
-            this.Valid.UseVisualStyleBackColor = false;
-            this.Valid.Click += new System.EventHandler(this.Valid_Click);
-            // 
-            // Cancel
-            // 
-            this.Cancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.Cancel.Location = new System.Drawing.Point(645, 320);
-            this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(73, 48);
-            this.Cancel.TabIndex = 9;
-            this.Cancel.Text = "Cancel";
-            this.Cancel.UseVisualStyleBackColor = false;
-            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(83, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Insert Name";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(78, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Update Name";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(78, 163);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 13);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Delete Name";
+            this.labelnom.AutoSize = true;
+            this.labelnom.Location = new System.Drawing.Point(79, 175);
+            this.labelnom.Name = "labelnom";
+            this.labelnom.Size = new System.Drawing.Size(29, 13);
+            this.labelnom.TabIndex = 11;
+            this.labelnom.Text = "Nom";
             // 
             // age
             // 
-            this.age.Location = new System.Drawing.Point(193, 215);
+            this.age.Location = new System.Drawing.Point(193, 290);
             this.age.Multiline = true;
             this.age.Name = "age";
             this.age.Size = new System.Drawing.Size(149, 42);
             this.age.TabIndex = 14;
             // 
-            // label4
+            // labelage
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(83, 231);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 13);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Age";
+            this.labelage.AutoSize = true;
+            this.labelage.Location = new System.Drawing.Point(82, 307);
+            this.labelage.Name = "labelage";
+            this.labelage.Size = new System.Drawing.Size(26, 13);
+            this.labelage.TabIndex = 16;
+            this.labelage.Text = "Age";
+            // 
+            // prenom
+            // 
+            this.prenom.Location = new System.Drawing.Point(193, 228);
+            this.prenom.Multiline = true;
+            this.prenom.Name = "prenom";
+            this.prenom.Size = new System.Drawing.Size(149, 38);
+            this.prenom.TabIndex = 17;
+            // 
+            // labelprenom
+            // 
+            this.labelprenom.AutoSize = true;
+            this.labelprenom.Location = new System.Drawing.Point(79, 243);
+            this.labelprenom.Name = "labelprenom";
+            this.labelprenom.Size = new System.Drawing.Size(43, 13);
+            this.labelprenom.TabIndex = 18;
+            this.labelprenom.Text = "Prenom";
+            // 
+            // labelcin
+            // 
+            this.labelcin.AutoSize = true;
+            this.labelcin.Location = new System.Drawing.Point(79, 111);
+            this.labelcin.Name = "labelcin";
+            this.labelcin.Size = new System.Drawing.Size(25, 13);
+            this.labelcin.TabIndex = 19;
+            this.labelcin.Text = "CIN";
+            // 
+            // cin
+            // 
+            this.cin.Location = new System.Drawing.Point(193, 98);
+            this.cin.Multiline = true;
+            this.cin.Name = "cin";
+            this.cin.Size = new System.Drawing.Size(149, 39);
+            this.cin.TabIndex = 20;
+            // 
+            // inser
+            // 
+            this.inser.AutoSize = true;
+            this.inser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inser.Location = new System.Drawing.Point(94, 26);
+            this.inser.Name = "inser";
+            this.inser.Size = new System.Drawing.Size(83, 29);
+            this.inser.TabIndex = 24;
+            this.inser.TabStop = true;
+            this.inser.Text = "Insert";
+            this.inser.UseVisualStyleBackColor = true;
+            this.inser.CheckedChanged += new System.EventHandler(this.inse_CheckedChanged);
+            // 
+            // updat
+            // 
+            this.updat.AutoSize = true;
+            this.updat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updat.Location = new System.Drawing.Point(258, 26);
+            this.updat.Name = "updat";
+            this.updat.Size = new System.Drawing.Size(99, 29);
+            this.updat.TabIndex = 25;
+            this.updat.TabStop = true;
+            this.updat.Text = "Update";
+            this.updat.UseVisualStyleBackColor = true;
+            this.updat.CheckedChanged += new System.EventHandler(this.upda_CheckedChanged);
+            // 
+            // delet
+            // 
+            this.delet.AutoSize = true;
+            this.delet.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delet.Location = new System.Drawing.Point(472, 26);
+            this.delet.Name = "delet";
+            this.delet.Size = new System.Drawing.Size(92, 29);
+            this.delet.TabIndex = 26;
+            this.delet.TabStop = true;
+            this.delet.Text = "Delete";
+            this.delet.UseVisualStyleBackColor = true;
+            this.delet.CheckedChanged += new System.EventHandler(this.dele_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.delet);
+            this.Controls.Add(this.updat);
+            this.Controls.Add(this.inser);
+            this.Controls.Add(this.cin);
+            this.Controls.Add(this.labelcin);
+            this.Controls.Add(this.labelprenom);
+            this.Controls.Add(this.prenom);
+            this.Controls.Add(this.labelage);
             this.Controls.Add(this.age);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Cancel);
-            this.Controls.Add(this.Valid);
+            this.Controls.Add(this.labelnom);
             this.Controls.Add(this.Delete);
             this.Controls.Add(this.Update);
             this.Controls.Add(this.Insert);
-            this.Controls.Add(this.fordelete);
-            this.Controls.Add(this.forupdate);
-            this.Controls.Add(this.forinsert);
+            this.Controls.Add(this.nom);
             this.Name = "Form1";
             this.Text = "Formulaire";
             this.ResumeLayout(false);
@@ -193,19 +212,20 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox forinsert;
-        private System.Windows.Forms.TextBox forupdate;
-        private System.Windows.Forms.TextBox fordelete;
+        private System.Windows.Forms.TextBox nom;
         private System.Windows.Forms.Button Insert;
         private System.Windows.Forms.Button Update;
         private System.Windows.Forms.Button Delete;
-        private System.Windows.Forms.Button Valid;
-        private System.Windows.Forms.Button Cancel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelnom;
         private System.Windows.Forms.TextBox age;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelage;
+        private System.Windows.Forms.TextBox prenom;
+        private System.Windows.Forms.Label labelprenom;
+        private System.Windows.Forms.Label labelcin;
+        private System.Windows.Forms.TextBox cin;
+        private System.Windows.Forms.RadioButton inser;
+        private System.Windows.Forms.RadioButton updat;
+        private System.Windows.Forms.RadioButton delet;
     }
 }
 

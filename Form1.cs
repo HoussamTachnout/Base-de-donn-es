@@ -28,10 +28,10 @@ namespace Base_de_données
                 string connString = "Server=localhost;Database=table;Uid=root;Pwd=;";
                 MySqlConnection mcon = new MySqlConnection(connString);
                 mcon.Open();
-                string cmdText = "UPDATE table1 SET nom = @nom WHERE age = @age";
+                string cmdText = "UPDATE table1 SET Nom = @Nom WHERE CIN = @CIN";
                 MySqlCommand cmd = new MySqlCommand(cmdText, mcon);
-                cmd.Parameters.Add("@nom", forupdate.Text);
-                cmd.Parameters.Add("@age", age.Text);
+                cmd.Parameters.Add("@Nom", nom.Text);
+                cmd.Parameters.Add("@CIN", cin.Text);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Data changed");
             }
@@ -44,16 +44,19 @@ namespace Base_de_données
 
         private void Insert_click(object sender, EventArgs e)
         {
+            
             try
             {
                 string connString = "Server=localhost;Database=table;Uid=root;Pwd=;";
                 MySqlConnection mcon = new MySqlConnection(connString);
                 mcon.Open();
 
-                string cmdText = "INSERT INTO table1(nom , age) VALUES (@nom,@age)";
+                string cmdText = "INSERT INTO table1(Nom , Age , Prenom , CIN) VALUES (@Nom,@Age,@Prenom,@CIN)";
                 MySqlCommand cmd = new MySqlCommand(cmdText, mcon);
-                cmd.Parameters.Add("@nom", forinsert.Text);
-                cmd.Parameters.Add("@age", age.Text);
+                cmd.Parameters.Add("@Nom", nom.Text);
+                cmd.Parameters.Add("@Age", age.Text);
+                cmd.Parameters.Add("@Prenom", prenom.Text);
+                cmd.Parameters.Add("@CIN", cin.Text);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Data Inserted");
             }
@@ -72,9 +75,9 @@ namespace Base_de_données
             MySqlConnection mcon = new MySqlConnection(connString);
             mcon.Open();
 
-            string cmdText = "DELETE from table1 WHERE nom = @nom";
+            string cmdText = "DELETE from table1 WHERE CIN = @CIN";
             MySqlCommand cmd = new MySqlCommand(cmdText, mcon);
-            cmd.Parameters.Add("@nom", fordelete.Text);
+            cmd.Parameters.Add("@cin", cin.Text);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Data Deleted");
             }
@@ -83,39 +86,44 @@ namespace Base_de_données
                 MessageBox.Show(ex.Message);
             }
         }
-
-        private void Valid_Click(object sender, EventArgs e)
+        private void inse_CheckedChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void Cancel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void forinsert_TextChanged(object sender, EventArgs e)
-        {
-            forupdate.Visible = false;
-            fordelete.Visible = false;
+            Insert.Visible = true;
             Update.Visible = false;
             Delete.Visible = false;
+            labelage.Visible = true;
+            labelprenom.Visible = true;
+            age.Visible = true;
+            prenom.Visible = true;
+            labelnom.Visible = true;
+            nom.Visible = true;
         }
 
-        private void forupdate_TextChanged(object sender, EventArgs e)
+        private void upda_CheckedChanged(object sender, EventArgs e)
         {
-            forinsert.Visible = false;
-            fordelete.Visible = false;
+            Update.Visible = true;
             Insert.Visible = false;
             Delete.Visible = false;
+            labelage.Visible = false;
+            labelprenom.Visible = false;
+            age.Visible = false;
+            prenom.Visible = false;
+            labelnom.Visible = true;
+            nom.Visible = true;
         }
 
-        private void fordelete_TextChanged(object sender, EventArgs e)
+        private void dele_CheckedChanged(object sender, EventArgs e)
         {
-            forupdate.Visible = false;
-            forinsert.Visible = false;
-            Update.Visible = false;
+            Delete.Visible = true;
             Insert.Visible = false;
+            Update.Visible = false;
+            labelage.Visible = false;
+            labelprenom.Visible = false;
+            labelnom.Visible = false;
+            age.Visible = false;
+            prenom.Visible = false;
+            nom.Visible = false;
+
         }
     }
 }
