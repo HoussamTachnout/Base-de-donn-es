@@ -125,5 +125,10 @@ namespace Base_de_données
             nom.Visible = false;
 
         }
+
+        private void cin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

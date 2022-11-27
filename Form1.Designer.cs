@@ -144,6 +144,7 @@
             this.cin.Name = "cin";
             this.cin.Size = new System.Drawing.Size(149, 39);
             this.cin.TabIndex = 20;
+            this.cin.TextChanged += new System.EventHandler(this.cin_TextChanged);
             // 
             // inser
             // 
