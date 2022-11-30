@@ -39,9 +39,8 @@
             this.labelprenom = new System.Windows.Forms.Label();
             this.labelcin = new System.Windows.Forms.Label();
             this.cin = new System.Windows.Forms.TextBox();
-            this.inser = new System.Windows.Forms.RadioButton();
-            this.updat = new System.Windows.Forms.RadioButton();
-            this.delet = new System.Windows.Forms.RadioButton();
+            this.valide = new System.Windows.Forms.Button();
+            this.annule = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // nom
@@ -55,7 +54,7 @@
             // Insert
             // 
             this.Insert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Insert.Location = new System.Drawing.Point(377, 364);
+            this.Insert.Location = new System.Drawing.Point(35, 364);
             this.Insert.Name = "Insert";
             this.Insert.Size = new System.Drawing.Size(73, 48);
             this.Insert.TabIndex = 5;
@@ -66,7 +65,7 @@
             // Update
             // 
             this.Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Update.Location = new System.Drawing.Point(508, 364);
+            this.Update.Location = new System.Drawing.Point(164, 364);
             this.Update.Name = "Update";
             this.Update.Size = new System.Drawing.Size(73, 48);
             this.Update.TabIndex = 6;
@@ -77,7 +76,7 @@
             // Delete
             // 
             this.Delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Delete.Location = new System.Drawing.Point(636, 364);
+            this.Delete.Location = new System.Drawing.Point(284, 364);
             this.Delete.Name = "Delete";
             this.Delete.Size = new System.Drawing.Size(73, 48);
             this.Delete.TabIndex = 7;
@@ -144,55 +143,36 @@
             this.cin.Name = "cin";
             this.cin.Size = new System.Drawing.Size(149, 39);
             this.cin.TabIndex = 20;
-            this.cin.TextChanged += new System.EventHandler(this.cin_TextChanged);
             // 
-            // inser
+            // valide
             // 
-            this.inser.AutoSize = true;
-            this.inser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inser.Location = new System.Drawing.Point(94, 26);
-            this.inser.Name = "inser";
-            this.inser.Size = new System.Drawing.Size(83, 29);
-            this.inser.TabIndex = 24;
-            this.inser.TabStop = true;
-            this.inser.Text = "Insert";
-            this.inser.UseVisualStyleBackColor = true;
-            this.inser.CheckedChanged += new System.EventHandler(this.inse_CheckedChanged);
+            this.valide.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.valide.Location = new System.Drawing.Point(506, 364);
+            this.valide.Name = "valide";
+            this.valide.Size = new System.Drawing.Size(73, 48);
+            this.valide.TabIndex = 27;
+            this.valide.Text = "Valide";
+            this.valide.UseVisualStyleBackColor = true;
+            this.valide.Click += new System.EventHandler(this.valide_Click);
             // 
-            // updat
+            // annule
             // 
-            this.updat.AutoSize = true;
-            this.updat.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updat.Location = new System.Drawing.Point(258, 26);
-            this.updat.Name = "updat";
-            this.updat.Size = new System.Drawing.Size(99, 29);
-            this.updat.TabIndex = 25;
-            this.updat.TabStop = true;
-            this.updat.Text = "Update";
-            this.updat.UseVisualStyleBackColor = true;
-            this.updat.CheckedChanged += new System.EventHandler(this.upda_CheckedChanged);
-            // 
-            // delet
-            // 
-            this.delet.AutoSize = true;
-            this.delet.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delet.Location = new System.Drawing.Point(472, 26);
-            this.delet.Name = "delet";
-            this.delet.Size = new System.Drawing.Size(92, 29);
-            this.delet.TabIndex = 26;
-            this.delet.TabStop = true;
-            this.delet.Text = "Delete";
-            this.delet.UseVisualStyleBackColor = true;
-            this.delet.CheckedChanged += new System.EventHandler(this.dele_CheckedChanged);
+            this.annule.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.annule.Location = new System.Drawing.Point(632, 364);
+            this.annule.Name = "annule";
+            this.annule.Size = new System.Drawing.Size(73, 48);
+            this.annule.TabIndex = 28;
+            this.annule.Text = "Annule";
+            this.annule.UseVisualStyleBackColor = true;
+            this.annule.Click += new System.EventHandler(this.annule_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.delet);
-            this.Controls.Add(this.updat);
-            this.Controls.Add(this.inser);
+            this.Controls.Add(this.annule);
+            this.Controls.Add(this.valide);
             this.Controls.Add(this.cin);
             this.Controls.Add(this.labelcin);
             this.Controls.Add(this.labelprenom);
@@ -224,9 +204,8 @@
         private System.Windows.Forms.Label labelprenom;
         private System.Windows.Forms.Label labelcin;
         private System.Windows.Forms.TextBox cin;
-        private System.Windows.Forms.RadioButton inser;
-        private System.Windows.Forms.RadioButton updat;
-        private System.Windows.Forms.RadioButton delet;
+        private System.Windows.Forms.Button valide;
+        private System.Windows.Forms.Button annule;
     }
 }
 

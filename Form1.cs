@@ -23,112 +23,113 @@ namespace Base_de_données
 
         private void Update_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string connString = "Server=localhost;Database=table;Uid=root;Pwd=;";
-                MySqlConnection mcon = new MySqlConnection(connString);
-                mcon.Open();
-                string cmdText = "UPDATE table1 SET Nom = @Nom WHERE CIN = @CIN";
-                MySqlCommand cmd = new MySqlCommand(cmdText, mcon);
-                cmd.Parameters.Add("@Nom", nom.Text);
-                cmd.Parameters.Add("@CIN", cin.Text);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Data changed");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            Update.Enabled = true;
+            Insert.Enabled = false;
+            Delete.Enabled = false;
+            labelage.Enabled = false;
+            labelprenom.Enabled = false;
+            age.Enabled = false;
+            prenom.Enabled = false;
+            labelnom.Enabled = true;
+            nom.Enabled = true;
 
         }
 
         private void Insert_click(object sender, EventArgs e)
         {
-            
-            try
-            {
-                string connString = "Server=localhost;Database=table;Uid=root;Pwd=;";
-                MySqlConnection mcon = new MySqlConnection(connString);
-                mcon.Open();
-
-                string cmdText = "INSERT INTO table1(Nom , Age , Prenom , CIN) VALUES (@Nom,@Age,@Prenom,@CIN)";
-                MySqlCommand cmd = new MySqlCommand(cmdText, mcon);
-                cmd.Parameters.Add("@Nom", nom.Text);
-                cmd.Parameters.Add("@Age", age.Text);
-                cmd.Parameters.Add("@Prenom", prenom.Text);
-                cmd.Parameters.Add("@CIN", cin.Text);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Data Inserted");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            Update.Enabled = false;
+            Insert.Enabled = true;
+            Delete.Enabled = false;
+            labelage.Enabled = true;
+            labelprenom.Enabled = true;
+            age.Enabled = true;
+            prenom.Enabled = true;
+            labelnom.Enabled = true;
+            nom.Enabled = true;
 
         }
 
         private void Delete_Click(object sender, EventArgs e)
         {
-            try
+            Update.Enabled = false;
+            Insert.Enabled = false;
+            Delete.Enabled = true;
+            labelage.Enabled = false;
+            labelprenom.Enabled = false;
+            labelnom.Enabled = false;
+            age.Enabled = false;
+            prenom.Enabled = false;
+            nom.Enabled = false;
+        }
+
+        private void valide_Click(object sender, EventArgs e)
+        {
+            if(Insert.Enabled==true)
             {
-                string connString = "Server=localhost;Database=table;Uid=root;Pwd=;";
-            MySqlConnection mcon = new MySqlConnection(connString);
-            mcon.Open();
+                try
+                {
+                    string connString = "Server=localhost;Database=table;Uid=root;Pwd=;";
+                    MySqlConnection mcon = new MySqlConnection(connString);
+                    mcon.Open();
 
-            string cmdText = "DELETE from table1 WHERE CIN = @CIN";
-            MySqlCommand cmd = new MySqlCommand(cmdText, mcon);
-            cmd.Parameters.Add("@cin", cin.Text);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Data Deleted");
+                    string cmdText = "INSERT INTO table1(Nom , Age , Prenom , CIN) VALUES (@Nom,@Age,@Prenom,@CIN)";
+                    MySqlCommand cmd = new MySqlCommand(cmdText, mcon);
+                    cmd.Parameters.Add("@Nom", nom.Text);
+                    cmd.Parameters.Add("@Age", age.Text);
+                    cmd.Parameters.Add("@Prenom", prenom.Text);
+                    cmd.Parameters.Add("@CIN", cin.Text);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Data Inserted");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
+            else if(Update.Enabled==true)
             {
-                MessageBox.Show(ex.Message);
+                try
+                {
+                    string connString = "Server=localhost;Database=table;Uid=root;Pwd=;";
+                    MySqlConnection mcon = new MySqlConnection(connString);
+                    mcon.Open();
+                    string cmdText = "UPDATE table1 SET Nom = @Nom WHERE CIN = @CIN";
+                    MySqlCommand cmd = new MySqlCommand(cmdText, mcon);
+                    cmd.Parameters.Add("@Nom", nom.Text);
+                    cmd.Parameters.Add("@CIN", cin.Text);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Data changed");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            else if(Delete.Enabled==true)
+            {
+                try
+                {
+                    string connString = "Server=localhost;Database=table;Uid=root;Pwd=;";
+                    MySqlConnection mcon = new MySqlConnection(connString);
+                    mcon.Open();
+
+                    string cmdText = "DELETE from table1 WHERE CIN = @CIN";
+                    MySqlCommand cmd = new MySqlCommand(cmdText, mcon);
+                    cmd.Parameters.Add("@cin", cin.Text);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Data Deleted");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
-        private void inse_CheckedChanged(object sender, EventArgs e)
+
+        private void annule_Click(object sender, EventArgs e)
         {
-            Insert.Visible = true;
-            Update.Visible = false;
-            Delete.Visible = false;
-            labelage.Visible = true;
-            labelprenom.Visible = true;
-            age.Visible = true;
-            prenom.Visible = true;
-            labelnom.Visible = true;
-            nom.Visible = true;
-        }
-
-        private void upda_CheckedChanged(object sender, EventArgs e)
-        {
-            Update.Visible = true;
-            Insert.Visible = false;
-            Delete.Visible = false;
-            labelage.Visible = false;
-            labelprenom.Visible = false;
-            age.Visible = false;
-            prenom.Visible = false;
-            labelnom.Visible = true;
-            nom.Visible = true;
-        }
-
-        private void dele_CheckedChanged(object sender, EventArgs e)
-        {
-            Delete.Visible = true;
-            Insert.Visible = false;
-            Update.Visible = false;
-            labelage.Visible = false;
-            labelprenom.Visible = false;
-            labelnom.Visible = false;
-            age.Visible = false;
-            prenom.Visible = false;
-            nom.Visible = false;
-
-        }
-
-        private void cin_TextChanged(object sender, EventArgs e)
-        {
-
+            MessageBox.Show("Cancel");
+            this.Close();
         }
     }
 }
