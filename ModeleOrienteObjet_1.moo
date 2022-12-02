@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?PowerDesigner AppLocale="UTF16" ID="{33B2584D-1A61-4719-9DC8-13A210A873C1}" Label="" LastModificationDate="1669932553" Name="ModeleOrienteObjet_1" Objects="25" Symbols="19" Target="C#" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="15.1.0.2850"?>
+<?PowerDesigner AppLocale="UTF16" ID="{33B2584D-1A61-4719-9DC8-13A210A873C1}" Label="" LastModificationDate="1669965854" Name="ModeleOrienteObjet_1" Objects="25" Symbols="19" Target="C#" TargetLink="Reference" Type="{18112060-1A4B-11D1-83D9-444553540000}" signature="CLD_OBJECT_MODEL" version="15.1.0.2850"?>
 <!-- Veuillez ne pas modifier ce fichier -->
 
 <Model xmlns:a="attribute" xmlns:c="collection" xmlns:o="object">
@@ -1406,8 +1406,9 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </o:TransitionSymbol>
 <o:TransitionSymbol Id="o14">
 <a:CreationDate>1669144263</a:CreationDate>
-<a:ModificationDate>1669144844</a:ModificationDate>
-<a:Rect>((-10575,-7150), (-3275,1474))</a:Rect>
+<a:ModificationDate>1669965854</a:ModificationDate>
+<a:SourceTextOffset>(-2737, -1787)</a:SourceTextOffset>
+<a:Rect>((-10697,-7150), (-3275,1474))</a:Rect>
 <a:ListOfPoints>((-3275,1474),(-5531,1474),(-5531,-7150),(-10575,-7150))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
@@ -1427,7 +1428,8 @@ DESTINATION 0 Arial,8,N</a:FontList>
 </o:TransitionSymbol>
 <o:TransitionSymbol Id="o18">
 <a:CreationDate>1669144266</a:CreationDate>
-<a:ModificationDate>1669144926</a:ModificationDate>
+<a:ModificationDate>1669965836</a:ModificationDate>
+<a:SourceTextOffset>(2850, -1813)</a:SourceTextOffset>
 <a:Rect>((-3275,-7125), (6050,1474))</a:Rect>
 <a:ListOfPoints>((-3275,1474),(-1069,1474),(-1069,-7125),(6050,-7125))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
@@ -1513,7 +1515,7 @@ DESTINATION 0 Arial,8,N</a:FontList>
 <a:CreationDate>1669144864</a:CreationDate>
 <a:ModificationDate>1669932532</a:ModificationDate>
 <a:SourceTextOffset>(1337, 12)</a:SourceTextOffset>
-<a:Rect>((-3513,8325), (-63,11700))</a:Rect>
+<a:Rect>((-4563,8325), (987,11700))</a:Rect>
 <a:ListOfPoints>((-3125,11700),(-3150,11700),(-3150,8325))</a:ListOfPoints>
 <a:CornerStyle>2</a:CornerStyle>
 <a:ArrowStyle>1</a:ArrowStyle>
@@ -1788,8 +1790,9 @@ DISPNAME 0 Arial,8,N</a:FontList>
 <a:ObjectID>FABE2020-9D5A-4A88-93C5-B7CBC6546F18</a:ObjectID>
 <a:CreationDate>1669144263</a:CreationDate>
 <a:Creator>ADS</a:Creator>
-<a:ModificationDate>1669144263</a:ModificationDate>
+<a:ModificationDate>1669965850</a:ModificationDate>
 <a:Modifier>ADS</a:Modifier>
+<a:FlowType>Click_Delete</a:FlowType>
 <c:Object1>
 <o:State Ref="o38"/>
 </c:Object1>
@@ -1801,8 +1804,9 @@ DISPNAME 0 Arial,8,N</a:FontList>
 <a:ObjectID>E15CD1A6-5E45-4257-A92C-CBE48F282157</a:ObjectID>
 <a:CreationDate>1669144266</a:CreationDate>
 <a:Creator>ADS</a:Creator>
-<a:ModificationDate>1669144266</a:ModificationDate>
+<a:ModificationDate>1669965817</a:ModificationDate>
 <a:Modifier>ADS</a:Modifier>
+<a:FlowType>Click_Update</a:FlowType>
 <c:Object1>
 <o:State Ref="o37"/>
 </c:Object1>
@@ -1855,9 +1859,9 @@ DISPNAME 0 Arial,8,N</a:FontList>
 <a:ObjectID>E7F6784D-A6A6-42C7-86B9-05EB0BF81979</a:ObjectID>
 <a:CreationDate>1669144864</a:CreationDate>
 <a:Creator>ADS</a:Creator>
-<a:ModificationDate>1669932526</a:ModificationDate>
+<a:ModificationDate>1669965806</a:ModificationDate>
 <a:Modifier>ADS</a:Modifier>
-<a:FlowType>Inserer</a:FlowType>
+<a:FlowType>Click_Inserer</a:FlowType>
 <c:Object1>
 <o:State Ref="o36"/>
 </c:Object1>
@@ -1941,7 +1945,7 @@ DISPNAME 0 Arial,8,N</a:FontList>
 <a:Code>Insertion</a:Code>
 <a:CreationDate>1669144110</a:CreationDate>
 <a:Creator>ADS</a:Creator>
-<a:ModificationDate>1669932526</a:ModificationDate>
+<a:ModificationDate>1669965806</a:ModificationDate>
 <a:Modifier>ADS</a:Modifier>
 </o:State>
 <o:State Id="o37">
@@ -1950,7 +1954,7 @@ DISPNAME 0 Arial,8,N</a:FontList>
 <a:Code>Update</a:Code>
 <a:CreationDate>1669144112</a:CreationDate>
 <a:Creator>ADS</a:Creator>
-<a:ModificationDate>1669932504</a:ModificationDate>
+<a:ModificationDate>1669965817</a:ModificationDate>
 <a:Modifier>ADS</a:Modifier>
 </o:State>
 <o:State Id="o38">
@@ -1959,7 +1963,7 @@ DISPNAME 0 Arial,8,N</a:FontList>
 <a:Code>Delete</a:Code>
 <a:CreationDate>1669144112</a:CreationDate>
 <a:Creator>ADS</a:Creator>
-<a:ModificationDate>1669932498</a:ModificationDate>
+<a:ModificationDate>1669965850</a:ModificationDate>
 <a:Modifier>ADS</a:Modifier>
 </o:State>
 <o:State Id="o39">
@@ -1968,7 +1972,7 @@ DISPNAME 0 Arial,8,N</a:FontList>
 <a:Code>Vide</a:Code>
 <a:CreationDate>1669144113</a:CreationDate>
 <a:Creator>ADS</a:Creator>
-<a:ModificationDate>1669932548</a:ModificationDate>
+<a:ModificationDate>1669965806</a:ModificationDate>
 <a:Modifier>ADS</a:Modifier>
 </o:State>
 </c:States>
@@ -1979,7 +1983,7 @@ DISPNAME 0 Arial,8,N</a:FontList>
 <a:Code>PointJonction_1</a:Code>
 <a:CreationDate>1669144238</a:CreationDate>
 <a:Creator>ADS</a:Creator>
-<a:ModificationDate>1669144238</a:ModificationDate>
+<a:ModificationDate>1669965850</a:ModificationDate>
 <a:Modifier>ADS</a:Modifier>
 </o:JunctionPoint>
 </c:JunctionPoints>
